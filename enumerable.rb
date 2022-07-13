@@ -5,16 +5,15 @@ module MyEnumerable
     @return
   end
 
-  def any? 
-    @return = false 
-    @list.each { |x| @return = true if yield x } 
-    @return 
-  end 
+  def any?
+    @return = false
+    @list.each { |x| @return = true if yield x }
+    @return
+  end
 
   def filter
-    @fillter_array = [] 
-    @list.each { |x| @fillter_array << x if yield x } 
-    @fillter_array 
-  end 
-
- end
+    @fillter_array = []
+    @list.each { |x| @fillter_array << x if yield x }
+    @fillter_array
+  end
+end
